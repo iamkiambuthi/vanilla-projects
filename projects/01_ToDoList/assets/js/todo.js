@@ -13,7 +13,7 @@ var createTaskList = function() {
 	/**
 	* Build a DOM Element to handle output.
 	*/
-	
+
 	wrapper = document.createElement("div");
 	wrapper.className = "task-list-wrapper";
 
@@ -27,8 +27,22 @@ var createTaskList = function() {
 }
 
 var addTaskListItem = function(element, item) {
+	// The delete button & its wrapper.
+	deleteItemWrapper = document.createElement("div");
+	deleteItemWrapper.className = "delete-btn-wrapper";
+
+	deleteItem = document.createElement("button");
+	deleteItem.className = "delete-btn";
+	deleteItem.innerHTML = "delete";
+	deleteItem.id = "deleteBtn";
+	
+	deleteItemWrapper.appendChild(deleteItem);
+
+	// add delete button inside list item.
 	l = document.createElement("li");
+	l.className = "task-list-item";
 	l.innerHTML = item;
+	l.appendChild(deleteItemWrapper);
 	element.appendChild(l);
 }
 
@@ -78,7 +92,6 @@ var createTaskItem = function() {
 
 var createTask = function(task) {
 	tasksQ.push(task);
-	console.log(tasksQ);
 }
 
 var taskItem = createTaskItem();
@@ -91,11 +104,36 @@ bdy.appendChild(taskList);
 var btn = taskItem.querySelector(".create-btn");
 var ls = taskList.querySelector(".task-list");
 
+var updateTaskListBtns = function() {
+	const delBtns = taskList.querySelectorAll(".delete-btn");
+	delBtns.forEach(item => {
+		item.addEventListener("click", event => {
+			var i = item.parentNode;
+			i.remove();
+
+		})
+	});
+	console.log(delBtns);
+
+	return delBtns;
+}
+
 btn.onclick = function() {
 	taskLabel = taskItem.querySelector(".task-input").value;
 	addTaskListItem(ls, taskLabel);
 	createTask(taskLabel);
+
+	updateTaskListBtns();
 }
+
+var removeItem = function() {
+	console.log("remove");
+}
+
+var delBtnz = updateTaskListBtns();
+delBtnz.addEventListener("click", removeItem);
+
+console.log(delBtnz)
 
 
 

@@ -3,3 +3,65 @@
  * iamkiambuthi
  * 2020.
  */
+ * {
+ 	padding: 0;
+ 	margin: 0;
+ 	box-sizing: border-box;
+ 	font-weight: 500;
+ 	font-family: monospace;
+}
+
+.site-body {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.task-item {
+	z-index: 99;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	width: 100%;
+ 	padding: 10px;
+ 	border-top: 2px solid gray;
+ 	background: white;
+}
+.task-input {
+	height: 30px;
+}
+.create-btn {
+	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+	margin-left: 10px;
+	text-align: center;
+	padding: 10px;
+	height: 30px;
+}
+
+.task-list-wrapper {
+	z-index: 9;
+	display: block;
+	min-height: 100vh;
+	max-width: 300px;
+	margin: 0 auto;
+}
+.task-list-item {
+	display: block;
+	height: auto;
+	border: 1px solid gray;
+	
+}
+.delete-btn-wrapper {
+	display: block;
+
+}
+.delete-btn {
+	display: block;
+	padding: 10px;
+}

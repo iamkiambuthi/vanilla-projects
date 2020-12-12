@@ -1,0 +1,26 @@
+/* styles.css @iamkiambuthi 2020. */
+
+* {
+	margin: 0;
+	font-family: "monospace";
+	box-sizing: border-box;
+}
+.site-body {
+	display: block;
+	font-weight: 600;
+	line-height: 1.4;
+	font-family: "monospace";
+}
+
+/* header-wrapper */
+.header-wrapper {
+	display: block;
+	padding: 8px;
+	border: 1px solid gray;
+	text-align: center;
+}
+.header-item {
+	display: block;
+	max-width: 500px;
+	margin: 0 auto;
+}

@@ -10,18 +10,33 @@
 
 // 1. Add validation to the task input to prevent creation of nameless tasks.
 // 2. Write and organize code better.
-// 3. Number tasks and add date created.
+// 3. add a task class.
 // 4. save tasks to localStorage.
-
-
 const bdy = document.querySelector("#root");
-tasksQ = [];
 
-// task-output.
-// waits for an input event then updates.
+var getDateToday = function() {
+	var dateTime = new Date();
+
+	return dateTime;
+}
+
+function createTask(tLabel) {
+	// A task object.
+
+	var task = new Object;
+	task.label = tLabel;
+	task.dateCreated = getDateToday();
+
+	task.getGenesis = function() {
+		return this.dateCreated;
+	}
+
+	return task;
+}
+
 var createTaskList = function() {
 	/**
-	* Build a DOM Element to handle output.
+	* Build a DOM Element to output the task list.
 	*/
 
 	wrapper = document.createElement("div");
@@ -37,6 +52,10 @@ var createTaskList = function() {
 }
 
 var addTaskListItem = function(element, item) {
+	/**
+	* Creates the DOM li element to show a task.
+	*/
+
 	// task-rank-wrapper.
 	var taskRankWrapper = document.createElement("div");
 	taskRankWrapper.className = "task-rank-wrapper";
@@ -83,11 +102,11 @@ var addTaskListItem = function(element, item) {
 }
 
 // task-input.
-// throws an click event.
 var createTaskItem = function() {
 	/**
 	* Build a DOM Element to handle task input.
 	*/
+	
 	// issa wrap.
 	wrapper = document.createElement("div");
 	wrapper.className = "task-item"
@@ -125,10 +144,6 @@ var createTaskItem = function() {
 
 	return wrapper;
 
-}
-
-var createTask = function(task) {
-	tasksQ.push(task);
 }
 
 var taskItem = createTaskItem();

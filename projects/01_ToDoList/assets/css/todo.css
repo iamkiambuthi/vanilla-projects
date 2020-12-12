@@ -33,6 +33,7 @@
 }
 .task-input {
 	height: 30px;
+	padding: 0px 5px;
 }
 .create-btn {
 	display: flex;
@@ -60,6 +61,7 @@
 	height: auto;
 	border: 1px solid gray;
 	border-radius: 5px;
+	
 	
 }
 .delete-btn-wrapper {

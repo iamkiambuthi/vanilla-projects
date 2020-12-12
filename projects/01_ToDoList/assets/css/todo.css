@@ -45,16 +45,21 @@
 }
 
 .task-list-wrapper {
-	z-index: 9;
+	position: relative;
 	display: block;
 	min-height: 100vh;
 	max-width: 300px;
 	margin: 0 auto;
+	padding: 3px;
+	border: 1px solid gray;
 }
 .task-list-item {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	height: auto;
 	border: 1px solid gray;
+	border-radius: 5px;
 	
 }
 .delete-btn-wrapper {

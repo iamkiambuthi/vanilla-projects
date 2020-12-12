@@ -4,6 +4,16 @@
  * 2020. 
  */
 
+// TODO
+// somehow this worked, taskQ is useless. save to localstorage and the design is ugly.
+// but it worked.
+
+// 1. Add validation to the task input to prevent creation of nameless tasks.
+// 2. Write and organize code better.
+// 3. Number tasks and add date created.
+// 4. save tasks to localStorage.
+
+
 const bdy = document.querySelector("#root");
 tasksQ = [];
 
@@ -27,22 +37,48 @@ var createTaskList = function() {
 }
 
 var addTaskListItem = function(element, item) {
-	// The delete button & its wrapper.
-	deleteItemWrapper = document.createElement("div");
-	deleteItemWrapper.className = "delete-btn-wrapper";
+	// task-rank-wrapper.
+	var taskRankWrapper = document.createElement("div");
+	taskRankWrapper.className = "task-rank-wrapper";
 
-	deleteItem = document.createElement("button");
-	deleteItem.className = "delete-btn";
-	deleteItem.innerHTML = "delete";
-	deleteItem.id = "deleteBtn";
-	
-	deleteItemWrapper.appendChild(deleteItem);
+	// task-rank.
+	var taskRank = document.createElement("div");
+	taskRank.className = "task-rank";
+
+	var taskRankItem = taskRankWrapper.appendChild(taskRank);
+
+	// task-label-wrapper.
+	var taskLabelWrapper = document.createElement("div");
+	taskLabelWrapper.className = "task-label-wrapper";
+
+	// task-label.
+	var taskLabel = document.createElement("div");
+	taskLabel.className = "task-label";
+
+	var taskLabelItem = taskLabelWrapper.appendChild(taskLabel);
+
+	// task-delete-wrapper
+	var taskDeleteWrapper = document.createElement("div");
+	taskDeleteWrapper.className = "delete-btn-wrapper";
+
+	// task-delete
+	var taskDelete = document.createElement("button");
+	taskDelete.className = "delete-btn";
+	taskDelete.innerHTML = "delete";
+	taskDelete.id = "deleteBtn";
+
+	taskDeleteItem = taskDeleteWrapper.appendChild(taskDelete);
+
+
 
 	// add delete button inside list item.
 	l = document.createElement("li");
 	l.className = "task-list-item";
 	l.innerHTML = item;
-	l.appendChild(deleteItemWrapper);
+	l.appendChild(taskRankItem);
+	l.appendChild(taskLabelItem);
+	l.appendChild(taskDeleteItem);
+
 	element.appendChild(l);
 }
 
@@ -71,6 +107,7 @@ var createTaskItem = function() {
 	taskInput.className = "task-input";
 	taskInput.type = "text";
 	taskInput.placeholder = "task label";
+	taskInput.required = true;
 
 	// task-btn.
 	taskBtn = document.createElement("button");
@@ -113,9 +150,6 @@ var updateTaskListBtns = function() {
 
 		})
 	});
-	console.log(delBtns);
-
-	return delBtns;
 }
 
 btn.onclick = function() {
@@ -125,15 +159,6 @@ btn.onclick = function() {
 
 	updateTaskListBtns();
 }
-
-var removeItem = function() {
-	console.log("remove");
-}
-
-var delBtnz = updateTaskListBtns();
-delBtnz.addEventListener("click", removeItem);
-
-console.log(delBtnz)
 
 
 

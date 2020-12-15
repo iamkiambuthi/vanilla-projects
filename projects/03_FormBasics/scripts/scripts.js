@@ -71,9 +71,11 @@ window.onload = function() {
 	var form = createSignupForm();
 	body.appendChild(form);
 
-	form.onsubmit = function() {
-		console.log("created");
+	var btn  = form.querySelector(".submit-btn");
+	btn.onclick = function () {
+		console.log("clicked");
 	}
+
 
 
 } 

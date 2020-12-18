@@ -64,12 +64,16 @@ html {
 	margin-bottom: 4px;
 	padding: 5px;
 }
+/* task-details */
+.td {
+	border: 1px solid var(--site-color);
+}
 
 /* task-rank-wrapper */
 .tr-w {
 	display: block;
 	padding: 10px;
-	border: 1px solid var(--site-color);
+	border-bottom: 1px solid var(--site-color);
 }
 /* task-rank */
 .tr {
@@ -85,7 +89,7 @@ html {
 .tl-w {
 	display: block;
 	padding: 2px;
-	border: 1px solid var(--site-color);
+	border-bottom: 1px solid var(--site-color);
 }
 /* task-label */
 .tl {
@@ -94,6 +98,7 @@ html {
 }
 /* task-date-item */
 .tdi {
+	font-weight: 600;
 	font-size: 11px;
 	color: gray;
 }
@@ -101,7 +106,6 @@ html {
 .td-w {
 	display: block;
 	width: 100%;
-	border: 1px solid var(--site-color);
 }
 /* task-delete-btn */
 .td-btn {

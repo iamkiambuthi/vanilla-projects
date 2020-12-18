@@ -3,6 +3,14 @@
 * iamkiambuthi. 2020.
 * MIT LICENSE
 */
+
+/*
+* TODO
+* =====
+* 1. Delete Btn not working.
+* 2. Push the last item above the bottom div.
+*
+*/
 window.onload = function() {
 	const body = document.querySelector("#root");
 	var taskList = [];
@@ -63,7 +71,7 @@ window.onload = function() {
 
 		var taskInputItemHeader = document.createElement("div");
 		taskInputItemHeader.className = "tii-h";
-		taskInputItemHeader.innerHTML = "Create a Task";
+		taskInputItemHeader.innerHTML = "Add a Task";
 
 		var taskInputItemBody = document.createElement("div");
 		taskInputItemBody.className = "tii-b";

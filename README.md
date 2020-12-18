@@ -14,7 +14,7 @@ Projects
 3. Form Basics
 4. A To Do List
 
-Not Complete
+To Do
 
 5. Calculator App.
 6. Recipes.
@@ -22,3 +22,4 @@ Not Complete
 8. Drawing App.
 9. Quiz App.
 10. CountDown App.
+11. Stonks App.

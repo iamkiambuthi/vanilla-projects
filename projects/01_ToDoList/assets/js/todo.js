@@ -13,6 +13,7 @@
 // 3. add a task class.
 // 4. save tasks to localStorage.
 const bdy = document.querySelector("#root");
+var taskQ = []
 
 var getDateToday = function() {
 	var dateTime = new Date();
@@ -26,11 +27,13 @@ function createTask(tLabel) {
 	var task = new Object;
 	task.label = tLabel;
 	task.dateCreated = getDateToday();
+	//task.rank = getTaskRank();
 
 	task.getGenesis = function() {
 		return this.dateCreated;
 	}
 
+	taskQ.push(task);
 	return task;
 }
 

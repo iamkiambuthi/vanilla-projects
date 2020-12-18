@@ -1,0 +1,113 @@
+/* styles.css - iamkiambuthi - 2020 - MIT LICENSE */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	position: relative;
+	display: block;
+	line-height: 1.4;
+	font-weight: 500;
+	font-family: monospace;
+}
+
+:root {
+	--site-color: gray;
+	--site-bg-color: white;
+}
+.site-body {
+	display: block;
+	margin: 0px 15px;
+	max-width: 400px;
+	margin: 0 auto;
+}
+.tii-w {
+	background: var(--site-bg-color);
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 10px;
+	border-top: 2px solid var(--site-color);
+}
+.tii-s {
+	display: block;
+} 
+.tii-h {
+	text-align: center;
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+.tii-b {
+	margin-bottom: 5px;
+}
+.tii-input {
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.tii-button {
+	padding: 5px;
+	max-width: 80px;
+	margin: 0 auto;
+}
+
+/* task-details-section */
+.td-s {
+	border: 1px solid var(--site-color);
+	border-radius: 5px;
+	margin-bottom: 4px;
+	padding: 5px;
+}
+
+/* task-rank-wrapper */
+.tr-w {
+	display: block;
+	padding: 10px;
+	border: 1px solid var(--site-color);
+}
+/* task-rank */
+.tr {
+	display: block;
+	text-align: center;
+	width: 30px;
+	border: 1px solid var(--site-color);
+	border-radius: 50%;
+	padding: 4px;
+}
+
+/* task-label-wrapper */
+.tl-w {
+	display: block;
+	padding: 2px;
+	border: 1px solid var(--site-color);
+}
+/* task-label */
+.tl {
+	display: block;
+	font-size: 16px;
+}
+/* task-date-item */
+.tdi {
+	font-size: 11px;
+	color: gray;
+}
+/* task-delete-wrapper */
+.td-w {
+	display: block;
+	width: 100%;
+	border: 1px solid var(--site-color);
+}
+/* task-delete-btn */
+.td-btn {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid var(--site-color);
+}
+

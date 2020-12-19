@@ -1,9 +1,9 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 html {
-	box-sizing: border-box;
 	font-family: monospace;
 	font-weight: 400;
 	line-height: 1.1;
@@ -115,6 +115,8 @@ img {
 	border-radius: 6px;
 }
 .ci-info {
+	font-size: 13px;
+	font-weight: 600;
 	font-variant: small-caps;
 	letter-spacing: 2px;
 }

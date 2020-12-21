@@ -2,25 +2,44 @@
 
 * {
 	margin: 0;
-	font-family: "monospace";
+	font-family: monospace;
 	box-sizing: border-box;
 }
 .site-body {
+	position: relative;
 	display: block;
+
 	font-weight: 600;
 	line-height: 1.4;
 	font-family: "monospace";
 }
-
-/* header-wrapper */
-.header-wrapper {
-	display: block;
-	padding: 8px;
+/* time-display-wrapper */
+.time-display-w {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.time-display {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border: 1px solid gray;
+	min-width: 100%;
+	padding: 5px;
+	font-size: 30px;
+}
+.time-display-item {
+	margin: 0px 5px;
+	padding: 10px 20px;
+	border: 1px solid gray;
+	border-radius: 5px;
 	text-align: center;
 }
-.header-item {
-	display: block;
-	max-width: 500px;
-	margin: 0 auto;
+.time-item {
+	font-size: 45px;
+}
+.display-info {
+	font-size: 16px;
+	color: gray; 
 }

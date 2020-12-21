@@ -1,51 +1,24 @@
+// Wait for document to load.
 window.onload = function() {
+	const timeItem = document.querySelector(".time-display");
+	const hoursItem = document.querySelector(".hours-item");
+	const minutesItem = document.querySelector(".minutes-item");
+	const secondsItem = document.querySelector(".seconds-item");
 
-	const body = document.querySelector("#root");
+	function displayTime() {
+		// get the date and time.
+		const dateTime = new Date();
 
-	var createHeaderElement = function() {
-		/**
-		* Creates a Header element.
-		*
-		*/
+		hour = dateTime.getHours();
+		minute = dateTime.getMinutes();
+		seconds = dateTime.getSeconds();
+		milliseconds = dateTime.getMilliseconds();
 		
-		var headerWrapper = document.createElement("div");
-		headerWrapper.className = "header-wrapper";
-
-		var header = document.createElement("header");
-		header.className = "header-item";
-
-		var timeWrapper = document.createElement("div");
-		timeWrapper.className = "time-wrapper"
-
-		var timeItem = document.createElement("div");
-		timeItem.className = "time-item";
-		timeItem.id = "time";
-
-		timeWrapper.appendChild(timeItem);
-		header.appendChild(timeWrapper);
-
-		headerWrapper.appendChild(header);
-		return headerWrapper
+		// insert into DOM
+		hoursItem.innerHTML = hour;
+		minutesItem.innerHTML = minute;
+		secondsItem.innerHTML = seconds;
 	}
 
-	var getDateTime = function() {
-		// get current time.
-
-		var dateTime = new Date().toLocaleTimeString();
-	
-		return dateTime;
-	}
-
-	var displayTime = function() {
-		// displays current_time onto the DOM.
-
-		const t = document.querySelector("#time");
-		t.innerHTML = getDateTime();
-		console.log("i run");
-	}
-
-	h = createHeaderElement();
-	body.appendChild(h);
-
-	setInterval(1, displayTime());
+	setInterval(displayTime, 1000);
 }

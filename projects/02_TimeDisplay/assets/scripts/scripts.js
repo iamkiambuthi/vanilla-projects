@@ -12,7 +12,6 @@ window.onload = function() {
 		hour = dateTime.getHours();
 		minute = dateTime.getMinutes();
 		seconds = dateTime.getSeconds();
-		milliseconds = dateTime.getMilliseconds();
 		
 		// insert into DOM
 		hoursItem.innerHTML = hour;

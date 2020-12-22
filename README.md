@@ -9,17 +9,5 @@ Lots of Love.
 
 Projects
 ===============
-1. A To Do List
-2. Display Time
-3. Form Basics
-4. A To Do List
-
-To Do
-
-5. Calculator App.
-6. Recipes.
-7. Chats App.
-8. Drawing App.
-9. Quiz App.
-10. CountDown App.
-11. Stonks App.
+1. Time Display
+2. To Do List

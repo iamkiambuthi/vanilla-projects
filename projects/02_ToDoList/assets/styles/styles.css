@@ -17,101 +17,66 @@ html {
 	--site-color: gray;
 	--site-bg-color: white;
 }
-.site-body {
+.site-container {
 	display: block;
-	margin: 0px 15px;
-	max-width: 400px;
+	max-width: 500px;
 	margin: 0 auto;
+	border: 1px solid gray;
 }
-.tii-w {
-	background: var(--site-bg-color);
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
+/* todo-form */
+.todo-form {
+	display: block;
+	background: gray;
+	padding: 10px;
+}
+.form-item {
+	display: block;
+	margin: 5px 0px;
+}
+.form-submit {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.submit-btn {
+	padding: 5px 10px;
+}
+.form-header {
+	text-align: center;
+}
+.form-input {
+	padding: 5px;
 	width: 100%;
-	padding: 10px;
-	border-top: 2px solid var(--site-color);
 }
-.tii-s {
+.error-field {
 	display: block;
-} 
-.tii-h {
-	text-align: center;
-	font-size: 22px;
-	margin-bottom: 5px;
-}
-.tii-b {
-	margin-bottom: 5px;
-}
-.tii-input {
-	padding: 5px;
-	margin-bottom: 5px;
-}
-.tii-button {
-	padding: 5px;
-	max-width: 80px;
-	margin: 0 auto;
-}
-
-/* task-details-section */
-.td-s {
-	border: 1px solid var(--site-color);
-	border-radius: 5px;
-	margin-bottom: 4px;
-	padding: 5px;
-}
-/* task-details */
-.td {
-	border: 1px solid var(--site-color);
-}
-
-/* task-rank-wrapper */
-.tr-w {
-	display: block;
-	padding: 10px;
-	border-bottom: 1px solid var(--site-color);
-}
-/* task-rank */
-.tr {
-	display: block;
-	text-align: center;
-	width: 30px;
-	border: 1px solid var(--site-color);
-	border-radius: 50%;
 	padding: 4px;
+	text-align: center;
+	
 }
-
-/* task-label-wrapper */
-.tl-w {
+/* todo-tasks-section */
+.todo-tasks {
 	display: block;
-	padding: 2px;
-	border-bottom: 1px solid var(--site-color);
-}
-/* task-label */
-.tl {
-	display: block;
-	font-size: 16px;
-}
-/* task-date-item */
-.tdi {
-	font-weight: 600;
-	font-size: 11px;
-	color: gray;
-}
-/* task-delete-wrapper */
-.td-w {
-	display: block;
-	width: 100%;
-}
-/* task-delete-btn */
-.td-btn {
-	display: block;
-	width: 100%;
 	padding: 10px;
-	border: 1px solid var(--site-color);
 }
-
+.task-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid gray;
+	padding: 5px 10px;
+}
+.task-label {
+	display: inline-block;
+	font-size: 18px;
+}
+.task-delete {
+	background: red;
+	color: white;
+	height: auto;
+	border: 2px solid red;
+	border-radius: 5px;
+	letter-spacing: 2px;
+	font-variant: small-caps;
+	padding: 5px 10px;
+}

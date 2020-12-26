@@ -8,6 +8,24 @@
     <title>to do list</title>
 </head>
 <body class="site-body" id="root">
+	<div class="site-container">
+		<form class="todo-form">
+			<div class="form-item">
+				<h2 class="form-header">Create a Task</h2>
+			</div>
+			<div class="form-item">
+				<input type="text" name="taskLabel" class="form-input">
+			</div>
+			<div class="form-submit">
+				<input type="submit" value="create" class="submit-btn">
+			</div>
+			<span class="error-field"></span>
+		</form>
+
+		<ul class="todo-tasks"></ul>
+		
+	</div>
+
 	<!-- vanilla script : scripts.js -->
     <script src="assets/scripts/scripts.js"></script>
 </body>

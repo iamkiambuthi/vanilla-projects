@@ -30,9 +30,10 @@
 	font-size: 30px;
 }
 .time-display-item {
+	min-width: 40px;
 	margin: 0px 5px;
 	padding: 10px 20px;
-	border: 1px solid gray;
+	border: 3px solid gray;
 	border-radius: 10px;
 	text-align: center;
 }
@@ -44,4 +45,15 @@
 	letter-spacing: 2px;
 	font-variant: small-caps;
 	color: gray; 
+}
+.dots-wrapper {
+	display: block;
+}
+.dot {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: gray;
+	margin: 4px;
+	border-radius: 5px;
 }

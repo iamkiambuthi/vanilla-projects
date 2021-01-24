@@ -1,3 +1,4 @@
+/* styles.css @iamkiambuthi 2021. MIT LICENSE */
 // Wait for document to load.
 window.onload = function() {
 	const timeItem = document.querySelector(".time-display");

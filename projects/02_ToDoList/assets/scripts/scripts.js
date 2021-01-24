@@ -1,3 +1,4 @@
+/* styles.css @iamkiambuthi 2021. */
 window.onload = function() {
 	const todoForm = document.querySelector(".todo-form");
 	const taskElement = document.querySelector(".todo-tasks");

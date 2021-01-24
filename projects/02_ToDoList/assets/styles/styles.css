@@ -17,16 +17,21 @@ html {
 	--site-color: gray;
 	--site-bg-color: white;
 }
+.site-body {
+	padding: 15px;
+	min-height: 100vh;
+}
 .site-container {
 	display: block;
 	max-width: 500px;
 	margin: 0 auto;
+	padding-top: 5px;
 	border: 1px solid gray;
+	border-radius: 3px;
 }
 /* todo-form */
 .todo-form {
 	display: block;
-	background: gray;
 	padding: 10px;
 }
 .form-item {
@@ -64,11 +69,13 @@ html {
 	align-items: center;
 	justify-content: space-between;
 	border: 1px solid gray;
+	border-radius: 3px;
 	padding: 5px 10px;
+	margin-bottom: 2px;
 }
 .task-label {
 	display: inline-block;
-	font-size: 18px;
+	font-size: 14px;
 }
 .task-delete {
 	background: red;

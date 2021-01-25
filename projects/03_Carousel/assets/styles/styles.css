@@ -37,7 +37,7 @@ body {
 /* carousel. */
 .carousel {
 	display: flex;
-	width: 1000vw;
+	min-width: 700px;
 }
 
 /* carousel-item. */
@@ -52,6 +52,11 @@ body {
 	border-radius: 15px;
 	color: white;
 	background: gray;
+}
+/* carousel-item */
+.active-item {
+	border: 2px solid black;
+	padding: 2px;
 }
 /* carousel-item-content. */
 .carousel-item-content {

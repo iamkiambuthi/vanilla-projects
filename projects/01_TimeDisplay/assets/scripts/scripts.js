@@ -1,5 +1,4 @@
 /* styles.css @iamkiambuthi 2021. MIT LICENSE */
-// Wait for document to load.
 window.onload = function() {
 	const timeItem = document.querySelector(".time-display");
 	const hoursItem = document.querySelector(".hours-item");
@@ -13,7 +12,7 @@ window.onload = function() {
 		hour = dateTime.getHours();
 		minute = dateTime.getMinutes();
 		seconds = dateTime.getSeconds();
-		
+	
 		// insert into DOM
 		hoursItem.innerHTML = hour;
 		minutesItem.innerHTML = minute;

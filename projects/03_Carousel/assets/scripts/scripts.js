@@ -5,7 +5,6 @@
 // ===========
 // 1. Translate the entire carousel left or right in the X axis.
 // 2. Focus on one singular item and shift focus to the left or right depending on direction.
-
 window.onload = function() {
 	// the buttons.
 	const leftBtn = document.querySelector('.carousel-btn.left');
@@ -17,6 +16,7 @@ window.onload = function() {
 	// the items in the carousel.
 	const carouselItems = document.querySelectorAll('.carousel-item');
 	itemsLength = carouselItems.length;
+	focusPosition = 0;
 
 	function assignInitialClasses() {
 		// sets initial classes.
@@ -37,10 +37,14 @@ window.onload = function() {
 		// moves focus to next item in the carousel.
 
 		devOutput.innerHTML = 'move focus to next item.';
+		focusPosition++;
+		
+
 	}
 	
 	function moveToPrevious() {
 		// moves focus to previous item in the carousel.
+		focusPosition--;
 		
 		devOutput.innerHTML = 'move focus to previous item.';
 	}

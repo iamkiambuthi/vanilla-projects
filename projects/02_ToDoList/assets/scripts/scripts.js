@@ -51,8 +51,6 @@ window.onload = function() {
 		
 		
 	});
-
-
 }
 
 
